@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAVA atelier | Bolsos Artesanales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --dorado: #b59410;
+            --oscuro: #1a1a1a;
+            --crema: #fdfaf5;
+            --blanco: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+        body { background-color: var(--crema); color: var(--oscuro); }
+
+        /* Header */
+        header {
+            background: var(--blanco);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 { font-size: 2.5rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 5px; }
+        .tagline { font-style: italic; color: #666; font-size: 0.9rem; }
+
+        /* Banner Principal */
+        .hero {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero p { max-width: 600px; margin: 1rem auto; line-height: 1.6; font-size: 1.1rem; }
+
+        /* Galería de Productos */
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+
+        .card {
+            background: var(--blanco);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card img { width: 100%; height: 350px; object-fit: cover; background-color: #eee; }
+
+        .card-info { padding: 1.5rem; text-align: center; }
+        .card-info h3 { margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .btn-comprar {
+            display: inline-block;
+            background: var(--oscuro);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn-comprar:hover { background: var(--dorado); }
+
+        /* Botón WhatsApp Flotante */
+        .wsp-flotante {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        footer { background: var(--oscuro); color: white; padding: 3rem 1rem; text-align: center; margin-top: 4rem; }
+        .social-links a { color: white; font-size: 1.5rem; margin: 0 1rem; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>MAVA atelier</h1>
+            <p class="tagline">Tradición artesanal & estilo moderno</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Diseñados y elaborados 100% a mano en Colombia 🇨🇴</h2>
+        <p>Cada bolso cuenta una historia. Piezas únicas para mujeres que aman lo auténtico.</p>
+    </section>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <img src="img/bolso1.jpg" alt="Bolso MAVA 1">
+                <div class="card-info">
+                    <h3>Referencia Artesanal 01</h3>
+                    <p>Cuero y tejido a mano</p>
+                    <a href="https://wa.me/573214670384?text=Hola! Me interesa el Bolso Referencia 01" class="btn-comprar">Consultar por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/bolso2.jpg" alt="Bolso MAVA 2">
+                <div class="card-info">
+                    <h3>Referencia Artesanal 02</h3>
+                    <p>Diseño Único</p>
+                    <a href="https://wa.me/573214670384?text=Hola! Me interesa el Bolso Referencia 02" class="btn-comprar">Consultar por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/bolso3.jpg" alt="Bolso MAVA 3">
+                <div class="card-info">
+                    <h3>Referencia Artesanal 03</h3>
+                    <p>Estilo Moderno</p>
+                    <a href="https://wa.me/573214670384?text=Hola! Me interesa el Bolso Referencia 03" class="btn-comprar">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/573214670384" class="wsp-flotante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>MAVA atelier - 2026</p>
+        <div class="social-links" style="margin-top: 15px;">
+            <a href="https://www.instagram.com/mavatelier?igsh=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
